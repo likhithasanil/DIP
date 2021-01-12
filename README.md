@@ -26,6 +26,10 @@ cv2.destroyAllWindows()
 
 
 Q2) Develop the program to perform linear transformation on image.
+Description
+
+
+**Program**
 Rotation of the image:
 import cv2
 import numpy as np
@@ -38,7 +42,7 @@ cv2.imshow('image',img)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
 
-** output **
+**output**
 
 ![Capture1](https://user-images.githubusercontent.com/72268045/104289786-92aa3300-54df-11eb-82ba-d7e40d5d134e.PNG)
 
@@ -85,6 +89,7 @@ cv2.destroyAllWindows()
 ![Captu](https://user-images.githubusercontent.com/72268045/104291986-414f7300-54e2-11eb-84f6-2df2d4dc02d6.PNG)
 
 Q4) Develop the program to convert color image to gray image and binary image.
+Descriptiion:
 
 **Program**
 import cv2
@@ -117,6 +122,9 @@ cv2.destroyAllWindows()
 ![mn](https://user-images.githubusercontent.com/72268045/104328099-7cb56600-5511-11eb-952d-8f3e536aaac5.PNG)
 
 Q6) program to create an image using 2D array
+Description :
+uint8 : Is an unsigned 8-bit integer that can represent valuese from 0-255.
+pil   : It is the python imaginary library which provides the python interpretr with the image editing capablities 
 
 **Program**
 import cv2 as c
