@@ -16,6 +16,8 @@ cv2.waitKey(0)
 cv2.destroyAllWindows()
 
 ** output **
+![Capt](https://user-images.githubusercontent.com/72268045/104295083-08190200-54e6-11eb-9062-6354c9ef1b4e.PNG)
+
 
 Q2) Develop the program to perform linear transformation on image.
 Rotation of the image:
