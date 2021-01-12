@@ -101,6 +101,8 @@ cv2.destroyAllWindows()
 ![1](https://user-images.githubusercontent.com/72268045/104327232-8b4f4d80-5510-11eb-9cc4-d71ce7667745.PNG)
 
 Q5) Develop the program to change the image to different color spaces.
+
+**Program**
 import cv2 img = cv2.imread("E:\\p14.jpg") gray=cv2.cvtColor(img,cv2.COLOR_BGR2GRAY) hsv=cv2.cvtColor(img,cv2.COLOR_BGR2HSV) lab=cv2.cvtColor(img,cv2.COLOR_BGR2LAB) hls=cv2.cvtColor(img,cv2.COLOR_BGR2HLS) yuv=cv2.cvtColor(img,cv2.COLOR_BGR2YUV)
 cv2.imshow("GRAY image",gray)
 cv2.imshow("HSV image",hsv)
@@ -113,3 +115,19 @@ cv2.destroyAllWindows()
 
 ** output **
 ![mn](https://user-images.githubusercontent.com/72268045/104328099-7cb56600-5511-11eb-952d-8f3e536aaac5.PNG)
+
+Q6) program to create an image using 2D array
+
+**Program**
+import cv2 as c
+import numpy as np
+from PIL import Image
+array = np.zeros([100, 200, 3], dtype=np.uint8)
+array[:,:100] = [255, 130, 0]
+array[:,100:] = [0, 0, 255]
+img = Image.fromarray(array)
+img.save('image1.png')
+img.show()
+c.waitKey(0)
+
+** output **
