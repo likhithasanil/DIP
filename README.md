@@ -2,14 +2,12 @@
 Q1. Develop a program to  display grayscale image using read and write the operation.
 
 **Description**
-imread() : is used for reading an image.
-imwrite(): is used to write an image in memory to disk.
-imshow() :to display an image.
-waitKey(): The function waits for specified milliseconds for any keyboard event. 
-destroyAllWindows():function to close all the windows.
-cv2. cvtColor() method is used to convert an image from one color space to another.
-For color conversion,
-we use the function cv2. cvtColor(input_image, flag) where flag determines the type of conversion. For BGR Gray conversion we use the flags cv2.COLOR_BGR2GRAY 
+imread() : is used for reading an image.<br/>
+imwrite(): is used to write an image in memory to disk.<br/>
+imshow() :to display an image.<br/>
+waitKey(): The function waits for specified milliseconds for any keyboard event. <br/>
+destroyAllWindows():function to close all the windows.<br/>
+cv2. cvtColor() method is used to convert an image from one color space to another For color conversion, we use the function cv2. cvtColor(input_image, flag) where flag determines the type of conversion. For BGR Gray conversion we use the flags cv2.COLOR_BGR2GRAY 
 
 **Program**
 import cv2
@@ -41,7 +39,10 @@ cv2.waitKey(0)
 cv2.destroyAllWindows()
 
 ** output **
+
 ![Capture1](https://user-images.githubusercontent.com/72268045/104289786-92aa3300-54df-11eb-82ba-d7e40d5d134e.PNG)
+
+
 
 B) Resizing of image.
 import cv2
@@ -55,6 +56,7 @@ cv2.waitKey(0)
 cv2.destroyAllWindows()
 
 ** output **
+
 ![Captur](https://user-images.githubusercontent.com/72268045/104290241-21b74b00-54e0-11eb-89b1-8832f79f8247.PNG)
 
 
