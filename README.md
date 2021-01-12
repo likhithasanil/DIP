@@ -1,9 +1,17 @@
 # DIP
-Q1. Develop the program to read and write the image.
+Q1. Develop a program to  display grayscale image using read and write the operation.
 
+**Description**
+imread() : is used for reading an image.
+imwrite(): is used to write an image in memory to disk.
+imshow() :to display an image.
+waitKey(): The function waits for specified milliseconds for any keyboard event. 
+destroyAllWindows():function to close all the windows.
+cv2. cvtColor() method is used to convert an image from one color space to another.
+For color conversion,
+we use the function cv2. cvtColor(input_image, flag) where flag determines the type of conversion. For BGR Gray conversion we use the flags cv2.COLOR_BGR2GRAY 
 
-
-
+**Program**
 import cv2
 import numpy as np
 image = cv2.imread('p4.jpg')
@@ -15,7 +23,7 @@ cv2.imwrite('sample.jpg',gray)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
 
-** output **
+**output**
 ![Capt](https://user-images.githubusercontent.com/72268045/104295083-08190200-54e6-11eb-9062-6354c9ef1b4e.PNG)
 
 
