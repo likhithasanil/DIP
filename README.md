@@ -35,3 +35,16 @@ cv2.destroyAllWindows()
 ** output **
 ![Capture1](https://user-images.githubusercontent.com/72268045/104289786-92aa3300-54df-11eb-82ba-d7e40d5d134e.PNG)
 
+B) Resizing of image.
+import cv2
+import numpy as np
+img = cv2.imread('p17.jpg')
+(height, width) = img.shape[:2]
+res = cv2.resize(img, (int(width / 2), int(height / 2)), interpolation = cv2.INTER_CUBIC)
+cv2.imshow('result', res)
+cv2.imshow('image',img)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
+
+** output **
+
