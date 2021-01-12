@@ -2,11 +2,11 @@
 Q1. Develop a program to  display grayscale image using read and write the operation.
 
 **Description**
-imread() : is used for reading an image.<br/>
-imwrite(): is used to write an image in memory to disk.<br/>
-imshow() :to display an image.<br/>
-waitKey(): The function waits for specified milliseconds for any keyboard event. <br/>
-destroyAllWindows():function to close all the windows.<br/>
+imread() : is used for reading an image.
+imwrite(): is used to write an image in memory to disk.
+imshow() :to display an image.
+waitKey(): The function waits for specified milliseconds for any keyboard event. 
+destroyAllWindows():function to close all the windows.
 cv2. cvtColor() method is used to convert an image from one color space to another For color conversion, we use the function cv2. cvtColor(input_image, flag) where flag determines the type of conversion. For BGR Gray conversion we use the flags cv2.COLOR_BGR2GRAY 
 
 **Program**
