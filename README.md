@@ -131,3 +131,5 @@ img.show()
 c.waitKey(0)
 
 ** output **
+![mn](https://user-images.githubusercontent.com/72268045/104329358-d4080600-5512-11eb-9d19-6d7190aeabfc.PNG)
+
