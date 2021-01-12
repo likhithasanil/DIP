@@ -84,3 +84,16 @@ cv2.destroyAllWindows()
 ** output **
 ![Captu](https://user-images.githubusercontent.com/72268045/104291986-414f7300-54e2-11eb-84f6-2df2d4dc02d6.PNG)
 
+Q4) Develop the program to convert color image to gray image and binary image.
+
+**Program**
+import cv2
+originalImage = cv2.imread('p14.jpg')
+grayImage = cv2.cvtColor(originalImage, cv2.COLOR_BGR2GRAY)
+(thresh,blackAndWhiteImage )= cv2.threshold(grayImage, 127, 255, cv2.THRESH_BINARY)
+cv2.imshow('Black white image', blackAndWhiteImage)
+cv2.imshow('Original image',originalImage)
+cv2.imshow('Gray image', grayImage)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
+
