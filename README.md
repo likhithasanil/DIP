@@ -99,3 +99,17 @@ cv2.destroyAllWindows()
 
 ** output **
 ![1](https://user-images.githubusercontent.com/72268045/104327232-8b4f4d80-5510-11eb-9cc4-d71ce7667745.PNG)
+
+Q5) Develop the program to change the image to different color spaces.
+import cv2 img = cv2.imread("E:\\p14.jpg") gray=cv2.cvtColor(img,cv2.COLOR_BGR2GRAY) hsv=cv2.cvtColor(img,cv2.COLOR_BGR2HSV) lab=cv2.cvtColor(img,cv2.COLOR_BGR2LAB) hls=cv2.cvtColor(img,cv2.COLOR_BGR2HLS) yuv=cv2.cvtColor(img,cv2.COLOR_BGR2YUV)
+cv2.imshow("GRAY image",gray)
+cv2.imshow("HSV image",hsv)
+cv2.imshow("LAB image",lab)
+cv2.imshow("HLS image",hls)
+cv2.imshow("YUV image",yuv)
+cv2.waitKey(0)
+cv2.destroyAllWindows() ret, bw_img = cv2.threshold(img,127,255,cv2.THRESH_BINARY)
+cv2.destroyAllWindows()
+
+** output **
+
