@@ -50,3 +50,25 @@ cv2.destroyAllWindows()
 ![Captur](https://user-images.githubusercontent.com/72268045/104290241-21b74b00-54e0-11eb-89b1-8832f79f8247.PNG)
 
 
+Q3) Develop a program to find the sum and mean of set of image
+create n number of images and read from directory and perform the operation
+import cv2
+import os
+path=("D:\Image")
+imgs=[]
+dirs=os.listdir(path)
+for file in dirs:
+fpath=path+"\\"+file
+imgs.append(cv2.imread(fpath))
+i=0
+for im in imgs:
+cv2.imshow(dirs[i],imgs[i])
+i=i+1
+cv2.waitKey(0)
+cv2.imshow("mean",len(im)/im)
+cv2.waitKey(0)
+cv2.imshow("sum",len(im))
+cv2.waitKey(0)
+cv2.destroyAllWindows()
+
+** output **
