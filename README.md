@@ -112,4 +112,4 @@ cv2.destroyAllWindows() ret, bw_img = cv2.threshold(img,127,255,cv2.THRESH_BINAR
 cv2.destroyAllWindows()
 
 ** output **
-
+![mn](https://user-images.githubusercontent.com/72268045/104328099-7cb56600-5511-11eb-952d-8f3e536aaac5.PNG)
