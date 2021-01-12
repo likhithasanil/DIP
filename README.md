@@ -33,3 +33,5 @@ cv2.waitKey(0)
 cv2.destroyAllWindows()
 
 ** output **
+![Capture1](https://user-images.githubusercontent.com/72268045/104289786-92aa3300-54df-11eb-82ba-d7e40d5d134e.PNG)
+
