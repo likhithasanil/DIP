@@ -178,6 +178,9 @@ c.waitKey(0)
 
 
 ## 7) Find the sum of all neighborhood values of the matrix.
+**Description**
+An array of (i, j) where i indicates row and j indicates column.
+
 **Program**
 import numpy as np
 M = [[1, 2, 3],
