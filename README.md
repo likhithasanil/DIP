@@ -202,3 +202,5 @@ print ("Original matrix:\n", M)
 print ("Summed neighbors matrix:\n", N)
 
 **output**
+![Captur](https://user-images.githubusercontent.com/72268045/104437470-a4252680-5543-11eb-85e0-825471592c52.PNG)
+
