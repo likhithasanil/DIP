@@ -180,6 +180,7 @@ c.waitKey(0)
 ## 7) Find the sum of all neighborhood values of the matrix.
 **Description**
 An array of (i, j) where i indicates row and j indicates column.
+For every given cell index(i,j),finding sums of all matrix elements except the elements present in the i'th row and/or j'th column.
 
 **Program**
 import numpy as np
