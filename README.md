@@ -59,6 +59,7 @@ Image resizing refers to the scaling of images. Scaling comes handy in many imag
 It helps in reducing the number of pixels from an image .
 cv2.resize() method refers to the scaling of images. It helps in reducing the number of pixels from an image .
 
+**Program**
 import cv2 as c
 img=c.imread("img3.jpg")
 c.imshow('image',img)
@@ -68,7 +69,6 @@ c.waitKey(0)
 
 
 ** output **
-
 ![Captur](https://user-images.githubusercontent.com/72268045/104290241-21b74b00-54e0-11eb-89b1-8832f79f8247.PNG)
 
 
@@ -81,27 +81,29 @@ Mean()    :The function mean calculates the mean value M of array elements, inde
 append()  :This method in python adds a single item to the existing list.
 listdir() : This method in python is used to get the list of all files and directories in the specified directory.
 
+**Program**
 import cv2
 import os
-path=("D:\Image")
-imgs=[]
-dirs=os.listdir(path)
-for file in dirs:
-fpath=path+"\\"+file
-imgs.append(cv2.imread(fpath))
+path = 'C:\images'
+imgs = []
+files = os.listdir(path)
+for file in files:
+    filepath=path+"\\"+file
+    imgs.append(cv2.imread(filepath))
 i=0
+im = []
 for im in imgs:
-cv2.imshow(dirs[i],imgs[i])
-i=i+1
+    #cv2.imshow(files[i],imgs[i])
+    im+=imgs[i]
+    i=i+1
+cv2.imshow("sum of five pictures",im)
+meanImg = im/len(files)
+cv2.imshow("mean of five pictures",meanImg)
 cv2.waitKey(0)
-cv2.imshow("mean",len(im)/im)
-cv2.waitKey(0)
-cv2.imshow("sum",len(im))
-cv2.waitKey(0)
-cv2.destroyAllWindows()
 
 ** output **
-![Captu](https://user-images.githubusercontent.com/72268045/104291986-414f7300-54e2-11eb-84f6-2df2d4dc02d6.PNG)
+![Capture](https://user-images.githubusercontent.com/72268045/104430787-feba8480-553b-11eb-81bc-e10ddfa20975.PNG)
+
 
 Q4) Develop the program to convert color image to gray image and binary image.
 **Description:
