@@ -78,6 +78,7 @@ Mean()    :The function mean calculates the mean value M of array elements, inde
 append()  :This method in python adds a single item to the existing list.
 listdir() : This method in python is used to get the list of all files and directories in the specified directory.
 
+
 **Program**
 import cv2
 import os
