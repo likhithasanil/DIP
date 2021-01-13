@@ -1,5 +1,5 @@
 # DIP
-Q1. Develop a program to  display grayscale image using read and write operation.
+## 1) Develop a program to  display grayscale image using read and write operation.
 
 **Description**
 Grayscaling is the process of converting an image from other color spaces e.g RGB, CMYK, HSV, etc. to shades of gray. It varies between complete black and white colors.
@@ -22,11 +22,11 @@ cv2.imwrite('sample.jpg',gray)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
 
-**output**<br/>
+**output**
 ![Capt](https://user-images.githubusercontent.com/72268045/104295083-08190200-54e6-11eb-9062-6354c9ef1b4e.PNG)
 
 
-Q2) Develop the program to perform linear transformation on image.
+## 2) Develop the program to perform linear transformation on image.
 **Description**
 //Rotation
 Image rotation is a common image processing routine used to rotate images at any desired angle. This helps in image reversal, flipping, and obtaining an intended view of the image. Image rotation has applications in matching, alignment, and other image-based algorithms. OpenCV is a well-known library used for image processing.
@@ -50,8 +50,6 @@ cv2.destroyAllWindows()
 
 ![Capture1](https://user-images.githubusercontent.com/72268045/104289786-92aa3300-54df-11eb-82ba-d7e40d5d134e.PNG)
 
-
-
 B) Resizing of image.
 **Description**
 //Scaling
@@ -67,15 +65,14 @@ nimg=c.resize(img,(0,0),fx=0.50,fy=0.50)
 c.imshow("Result",nimg)
 c.waitKey(0)
 
-
-** output **
+**Output**
 ![Captur](https://user-images.githubusercontent.com/72268045/104290241-21b74b00-54e0-11eb-89b1-8832f79f8247.PNG)
 
 
-Q3) Develop a program to find the sum and mean of set of image
+## 3) Develop a program to find the sum and mean of set of image
 create n number of images and read from directory and perform the operation.
 **Description**
-TO add two images with the OpenCV function,
+TO add two images with the OpenCV function:
 cv. add(), or simply by the numpy operation res = img1 + img2 we can add the images.
 Mean()    :The function mean calculates the mean value M of array elements, independently for each channel, and return it:" This mean it should return you a scalar for each layer of you image
 append()  :This method in python adds a single item to the existing list.
@@ -101,11 +98,10 @@ meanImg = im/len(files)
 cv2.imshow("mean of five pictures",meanImg)
 cv2.waitKey(0)
 
-** output **
+**Output**
 ![Capture](https://user-images.githubusercontent.com/72268045/104430787-feba8480-553b-11eb-81bc-e10ddfa20975.PNG)
 
-
-Q4) Develop the program to convert color image to gray image and binary image.
+## 4) Develop the program to convert color image to gray image and binary image.
 **Description:
 Threshold function : Now, to convert our image to black and white, we will apply the thresholding operation. 
 To do it, we need to call the threshold function of the cv2 module.
@@ -128,10 +124,10 @@ cv2.imshow('Gray image', grayImage)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
 
-** output **
+**Output**
 ![1](https://user-images.githubusercontent.com/72268045/104327232-8b4f4d80-5510-11eb-9cc4-d71ce7667745.PNG)
 
-Q5) Develop the program to change the image to different color spaces.
+## 5) Develop the program to change the image to different color spaces.
 **Description:
 color spaces :Color spaces are different types of color modes, used in image processing and signals and system for various purposes.
 cvtcolor     :cvtColor() method is used to convert an image from one color space to another.
@@ -156,14 +152,14 @@ cv2.imshow("YUV image",yuv)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
 
-** output **
+**Output**
 ![mn](https://user-images.githubusercontent.com/72268045/104328099-7cb56600-5511-11eb-952d-8f3e536aaac5.PNG)
 
-Q6) program to create an image using 2D array
+## 6) program to create an image using 2D array
 **Description :
 2D array can be defined as an array of arrays. The 2D array is organized as matrices which can be represented as the collection of rows and columns. However, 2D arrays are created to implement a relational database look like data structure.
 uint8 : Is an unsigned 8-bit integer that can represent valuese from 0-255.
-pil   : It is the python imaginary library which provides the python interpretr with the image editing capablities 
+PIL   : It is the python imaginary library which provides the python interpretr with the image editing capablities 
 
 **Program**
 import cv2 as c
@@ -177,7 +173,32 @@ img.save('image1.png')
 img.show()
 c.waitKey(0)
 
-** output **
+**Output**
 ![mn](https://user-images.githubusercontent.com/72268045/104329358-d4080600-5512-11eb-9d19-6d7190aeabfc.PNG)
 
 
+## 7) Find the sum of all neighborhood values of the matrix.
+**Program**
+import numpy as np
+M = [[1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]]
+M = np.asarray(M)
+N = np.zeros(M.shape)
+def sumNeighbors(M,x,y):
+    l = []
+    for i in range(max(0,x-1),x+2): # max(0,x-1), such that no negative values in range()
+        for j in range(max(0,y-1),y+2):
+            try:
+                t = M[i][j]
+                l.append(t)
+            except IndexError: # if entry doesn't exist
+                pass
+    return sum(l)-M[x][y] # exclude the entry itself
+for i in range(M.shape[0]):
+    for j in range(M.shape[1]):
+        N[i][j] = sumNeighbors(M, i, j)
+print ("Original matrix:\n", M)
+print ("Summed neighbors matrix:\n", N)
+
+**output**
