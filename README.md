@@ -175,8 +175,7 @@ img.show()
 c.waitKey(0)
 
 **Output**
-![mn](https://user-images.githubusercontent.com/72268045/104329358-d4080600-5512-11eb-9d19-6d7190aeabfc.PNG)
-
+![Capt](https://user-images.githubusercontent.com/72268045/104441647-cd948100-5548-11eb-9d27-fed92cfe3d3b.PNG)
 
 ## 7) Find the sum of all neighborhood values of the matrix.
 **Description**
