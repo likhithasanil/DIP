@@ -208,7 +208,8 @@ print ("Summed neighbors matrix:\n", N)
 **output**
 ![Captur](https://user-images.githubusercontent.com/72268045/104437470-a4252680-5543-11eb-85e0-825471592c52.PNG)
 
-8) Operator overloading
+## 8) Program for Operator overloading.
+
 #include <iostream>
 using namespace std;
 class matrix
@@ -322,7 +323,7 @@ int main()
 return 0;
 }
 
-*output*
+**output**
 Enter the row and column size for the  matrix
 2
 2
