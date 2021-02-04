@@ -35,6 +35,7 @@ cv2.getRotationMatrix2D :Perform the counter clockwise rotation
 warpAffine()            :This function is the size of the output image, which should be in the form of (width, height). where width = number of columns, and height = number of rows.
 
 **Program**
+```python
 Rotation of the image:
 import cv2
 import numpy as np
@@ -46,7 +47,7 @@ cv2.imshow('result', res)
 cv2.imshow('image',img)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
-
+```
 **output**
 
 ![Capture1](https://user-images.githubusercontent.com/72268045/104289786-92aa3300-54df-11eb-82ba-d7e40d5d134e.PNG)
@@ -59,13 +60,14 @@ It helps in reducing the number of pixels from an image .
 cv2.resize() method refers to the scaling of images. It helps in reducing the number of pixels from an image .
 
 **Program**
+```python
 import cv2 as c
 img=c.imread("img3.jpg")
 c.imshow('image',img)
 nimg=c.resize(img,(0,0),fx=0.50,fy=0.50)
 c.imshow("Result",nimg)
 c.waitKey(0)
-
+```
 **Output**
 ![Captur](https://user-images.githubusercontent.com/72268045/104290241-21b74b00-54e0-11eb-89b1-8832f79f8247.PNG)
 
@@ -81,6 +83,7 @@ listdir() : This method in python is used to get the list of all files and direc
 
 
 **Program**
+```python
 import cv2
 import os
 path = 'C:\images'
@@ -99,7 +102,7 @@ cv2.imshow("sum of five pictures",im)
 meanImg = im/len(files)
 cv2.imshow("mean of five pictures",meanImg)
 cv2.waitKey(0)
-
+```
 **Output**
 ![Capture](https://user-images.githubusercontent.com/72268045/104430787-feba8480-553b-11eb-81bc-e10ddfa20975.PNG)
 
@@ -116,6 +119,7 @@ Binary image :A binary image is one that consists of pixels that can have one of
 cvtcolor     :cvtColor() method is used to convert an image from one color space to another.
 
 **Program**
+```python
 import cv2
 originalImage = cv2.imread('p14.jpg')
 grayImage = cv2.cvtColor(originalImage, cv2.COLOR_BGR2GRAY)
@@ -125,7 +129,7 @@ cv2.imshow('Original image',originalImage)
 cv2.imshow('Gray image', grayImage)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
-
+```
 **Output**
 ![1](https://user-images.githubusercontent.com/72268045/104327232-8b4f4d80-5510-11eb-9cc4-d71ce7667745.PNG)
 
@@ -140,6 +144,7 @@ HLS          :The HSL color space, also called HLS or HSI, stands for:Hue : the 
 YUV          :Refers to the luminance or intensity, and U/V channels represent color information. This works well in many applications because the human visual system perceives               intensity information very differently from color information
 
 **Program**
+```python
 import cv2 img = cv2.imread("E:\\p14.jpg") 
 gray=cv2.cvtColor(img,cv2.COLOR_BGR2GRAY) 
 hsv=cv2.cvtColor(img,cv2.COLOR_BGR2HSV) 
@@ -153,7 +158,7 @@ cv2.imshow("HLS image",hls)
 cv2.imshow("YUV image",yuv)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
-
+```
 **Output**
 ![mn](https://user-images.githubusercontent.com/72268045/104328099-7cb56600-5511-11eb-952d-8f3e536aaac5.PNG)
 
@@ -164,6 +169,7 @@ uint8 : Is an unsigned 8-bit integer that can represent valuese from 0-255.
 PIL   : It is the python imaginary library which provides the python interpretr with the image editing capablities 
 
 **Program**
+```python
 import cv2 as c
 import numpy as np
 from PIL import Image
@@ -174,7 +180,7 @@ img = Image.fromarray(array)
 img.save('image1.png')
 img.show()
 c.waitKey(0)
-
+```
 **Output**
 ![Capt](https://user-images.githubusercontent.com/72268045/104441647-cd948100-5548-11eb-9d27-fed92cfe3d3b.PNG)
 
@@ -184,6 +190,7 @@ An array of (i, j) where i indicates row and j indicates column.
 For every given cell index(i,j),finding sums of all matrix elements except the elements present in the i'th row and/or j'th column.
 
 **Program**
+```python
 import numpy as np
 M = [[1, 2, 3],
     [4, 5, 6],
@@ -205,12 +212,12 @@ for i in range(M.shape[0]):
         N[i][j] = sumNeighbors(M, i, j)
 print ("Original matrix:\n", M)
 print ("Summed neighbors matrix:\n", N)
-
+```
 **output**
 ![Captur](https://user-images.githubusercontent.com/72268045/104437470-a4252680-5543-11eb-85e0-825471592c52.PNG)
 
 ## 8) Program for Operator overloading.
-
+```python
 #include <iostream>
 using namespace std;
 class matrix
@@ -232,7 +239,6 @@ public:int get()
 
    }
   }
- 
  
  };
  void operator+(matrix a1)
@@ -323,7 +329,7 @@ int main()
  p * q;
 return 0;
 }
-
+```
 **output**
 Enter the row and column size for the  matrix
 2
@@ -352,6 +358,7 @@ multiplication is
  18     47
 
 # 9) Find the each neighborhood values of the matrix
+```python
 import numpy as np
 ini_array = np.array([[1, 2,5, 3], [4,5, 4, 7], [9, 6, 1,0]])
 print("initial_array : ", str(ini_array));
@@ -360,7 +367,7 @@ def neighbors(radius, rowNumber, columnNumber):
             for j in range(columnNumber-1-radius, columnNumber+radius)]
            for i in range(rowNumber-1-radius, rowNumber+radius)]
 neighbors(1,2,1)
-
+```
 **OUTPUT**
 initial_array :  [[1 2 5 3]
  [4 5 4 7]
