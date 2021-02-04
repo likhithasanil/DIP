@@ -11,6 +11,7 @@ destroyAllWindows():function to close all the windows.
 cv2. cvtColor() method is used to convert an image from one color space to another For color conversion, we use the function cv2. cvtColor(input_image, flag) where flag determines the type of conversion. For BGR Gray conversion we use the flags cv2.COLOR_BGR2GRAY 
 
 **Program**
+```python
 import cv2
 import numpy as np
 image = cv2.imread('p4.jpg')
@@ -21,7 +22,7 @@ cv2.imshow('Gray', gray)
 cv2.imwrite('sample.jpg',gray)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
-
+```
 **output**
 ![Capt](https://user-images.githubusercontent.com/72268045/104295083-08190200-54e6-11eb-9062-6354c9ef1b4e.PNG)
 
